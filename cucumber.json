@@ -1,0 +1,20 @@
+{
+  "default": {
+    "timeout": 30000,
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    },
+    "paths": [
+      "tests/features/demo.feature",
+      "tests/features/login.feature"
+    ],
+    "dryRun": false,
+    "require": [
+      "tests/steps/*.js",
+      "tests/pages/*.js"
+    ],
+    "format": [
+      "html:cucumber-report.html"
+    ]
+  }
+}
