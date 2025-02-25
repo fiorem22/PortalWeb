@@ -1,9 +1,10 @@
 {
   "name": "utp-portal-automation",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test"
+    "test": "cucumber-js tests/features --require tests/steps"
   },
   "keywords": [],
   "author": "Pamela Mosqueira",

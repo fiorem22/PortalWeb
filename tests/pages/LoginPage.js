@@ -2,6 +2,7 @@ import { expect } from "@playwright/test";
 
 export class LoginPage {
     constructor(page) {
+        if (!page) throw new Error("🚨 ERROR: 'page' no está definido en LoginPage");
         this.page = page;
         this.usernameInput = "#username";
         this.passwordInput = "#password";

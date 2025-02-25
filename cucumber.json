@@ -11,7 +11,9 @@
     "dryRun": false,
     "require": [
       "tests/steps/*.js",
-      "tests/pages/*.js"
+      "tests/pages/*.js",
+      "tests/support/world.js",
+      "tests/support/hooks.js"
     ],
     "format": [
       "html:cucumber-report.html"
