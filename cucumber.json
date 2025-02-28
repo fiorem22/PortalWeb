@@ -6,7 +6,8 @@
     },
     "paths": [
       "tests/features/demo.feature",
-      "tests/features/login.feature"
+      "tests/features/login.feature",
+      "tests/features/servicio.feature"
     ],
     "dryRun": false,
     "require": [

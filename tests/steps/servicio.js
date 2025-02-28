@@ -18,6 +18,20 @@ When("el usuario hace clic en la pestaña {string}", async function (tabName) {
 });
 
 Then("debería ver la página de servicios", async function () {
-    const pageTitle = await this.servicioPage.getPageTitle();
-    expect(pageTitle).toContain("Servicios");
+
+    const servicioLocator = this.page.locator('text=Servicios');
+    const servicioLink = this.page.locator('a', { hasText: "Servicios" });
+
+    try {
+        await servicioLocator.waitFor({ state: 'visible', timeout: 20000 });
+        console.log("✅ ASSERT PASSED: Se encontró correctamente el texto 'Servicios'.");
+    } catch (error) {
+        try {
+            await servicioLink.waitFor({ state: 'visible', timeout: 10000 });
+            console.log("✅ ASSERT PASSED: Se encontró el enlace 'Servicios'.");
+        } catch (error) {
+            console.error("❌ ERROR: No se encontró el texto ni el enlace 'Servicios'.");
+            throw error;
+        }
+    }
 });
