@@ -20,9 +20,9 @@ Given("providing valid url", async function () {
     console.log("✅ Página de login cargada correctamente.");
 });
 
-When("providing valid username and password", async function () {
+When("providing valid {string} and {string}", async function (username, password) {
     const loginPage = new LoginPage(this.page);
-    await loginPage.login("U24254650@", "1234");
+    await loginPage.login(username, password);
     console.log("✅ Usuario y contraseña ingresados.");
 });
 

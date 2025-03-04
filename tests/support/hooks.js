@@ -14,7 +14,6 @@ Before(async function () {
     console.log("🔄 [Before] Configurando contexto y página");
     this.browser = browser;
     this.context = await this.browser.newContext();
-    //this.page = await this.context.newPage();
 });
 
 After(async function () {
